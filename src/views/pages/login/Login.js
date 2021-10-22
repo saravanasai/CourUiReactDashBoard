@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link,useHistory } from 'react-router-dom'
 import {
   CButton,
   CCard,
@@ -9,14 +9,42 @@ import {
   CContainer,
   CForm,
   CFormInput,
+  CFormSelect,
   CInputGroup,
   CInputGroupText,
   CRow,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
+import { useSelector } from 'react-redux'
 
 const Login = () => {
+
+   const [LoginForm,setLoginForm]=useState({
+     username:"",
+     password:"",
+     department:0
+   })
+   const navigation = useHistory();
+   const handleLogin=()=>
+   {
+
+       if(LoginForm.username=="test" && LoginForm.password=="1234")
+       {
+
+            switch(LoginForm.department)
+            {
+              case '1': function redirect()
+              {
+                navigation.push('/security'); break;
+              }
+              case '2': navigation.push('');break;
+              case '3': navigation.push('');break;
+              default: console.log("not matched");
+            }
+       }
+   }
+
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
@@ -32,7 +60,8 @@ const Login = () => {
                       <CInputGroupText>
                         <CIcon icon={cilUser} />
                       </CInputGroupText>
-                      <CFormInput placeholder="Username" autoComplete="username" />
+
+                      <CFormInput placeholder="Username" value={LoginForm.username}  onChange={(e)=>setLoginForm({...LoginForm,username:e.target.value})} />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
                       <CInputGroupText>
@@ -41,13 +70,20 @@ const Login = () => {
                       <CFormInput
                         type="password"
                         placeholder="Password"
-                        autoComplete="current-password"
+                        value={LoginForm.password}
+                        onChange={(e)=>setLoginForm({...LoginForm,password:e.target.value})}
                       />
                     </CInputGroup>
+                    <CFormSelect value={LoginForm.department} onChange={(e)=>setLoginForm({...LoginForm,department:e.target.value})} className="my-3" aria-label="Default select example">
+                      <option>Choose Department</option>
+                      <option value="1">Security</option>
+                      <option value="2">Sourcing</option>
+                      <option value="3">Accounts</option>
+                    </CFormSelect>
                     <CRow>
                       <CCol xs={6}>
                         <div className="float-right">
-                          <CButton color="primary" className="px-4">
+                          <CButton onClick={handleLogin} color="primary" className="px-4">
                             Login
                           </CButton>
                         </div>
