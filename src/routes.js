@@ -1,7 +1,6 @@
 import React from 'react'
-import parkingYardGate from './components/home/parkingYardGate'
+import ParkingYardGate from './components/home/parkingYardGate'
 import Test from './components/home/Test'
-
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
@@ -96,7 +95,7 @@ const routes = [
   { path: '/notifications/toasts', name: 'Toasts', component: Toasts },
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/test', name: 'Test', component: Test },
-  { path: '/security', name: 'security', component: parkingYardGate },
+  { path: '/security', name: 'security', component: ParkingYardGate },
 ]
 
 export default routes

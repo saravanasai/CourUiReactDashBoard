@@ -33,6 +33,7 @@ const Login = () => {
     if (LoginForm.username === 'test' && LoginForm.password === '1234') {
       switch (LoginForm.department) {
         case '1': {
+          console.log("ok");
           navigation.push('/security')
           break
         }
