@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link,useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import {
   CButton,
   CCard,
@@ -16,34 +16,37 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
-import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import loginRequest from 'src/redux/Auth/AuthAction'
 
 const Login = () => {
-
-   const [LoginForm,setLoginForm]=useState({
-     username:"",
-     password:"",
-     department:0
-   })
-   const navigation = useHistory();
-   const handleLogin=()=>
-   {
-
-       if(LoginForm.username=="test" && LoginForm.password=="1234")
-       {
-
-            switch(LoginForm.department)
-            {
-              case '1': function redirect()
-              {
-                navigation.push('/security'); break;
-              }
-              case '2': navigation.push('');break;
-              case '3': navigation.push('');break;
-              default: console.log("not matched");
-            }
-       }
-   }
+  const [LoginForm, setLoginForm] = useState({
+    username: '',
+    password: '',
+    department: 0,
+  })
+  const navigation = useHistory()
+  const dispatch = useDispatch()
+  const handleLogin = () => {
+    console.log(LoginForm.department)
+    dispatch(loginRequest(LoginForm.department))
+    if (LoginForm.username === 'test' && LoginForm.password === '1234') {
+      switch (LoginForm.department) {
+        case '1': {
+          navigation.push('/security')
+          break
+        }
+        case '2':
+          navigation.push('')
+          break
+        case '3':
+          navigation.push('')
+          break
+        default:
+          console.log('not matched')
+      }
+    }
+  }
 
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
@@ -61,7 +64,11 @@ const Login = () => {
                         <CIcon icon={cilUser} />
                       </CInputGroupText>
 
-                      <CFormInput placeholder="Username" value={LoginForm.username}  onChange={(e)=>setLoginForm({...LoginForm,username:e.target.value})} />
+                      <CFormInput
+                        placeholder="Username"
+                        value={LoginForm.username}
+                        onChange={(e) => setLoginForm({ ...LoginForm, username: e.target.value })}
+                      />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
                       <CInputGroupText>
@@ -71,10 +78,15 @@ const Login = () => {
                         type="password"
                         placeholder="Password"
                         value={LoginForm.password}
-                        onChange={(e)=>setLoginForm({...LoginForm,password:e.target.value})}
+                        onChange={(e) => setLoginForm({ ...LoginForm, password: e.target.value })}
                       />
                     </CInputGroup>
-                    <CFormSelect value={LoginForm.department} onChange={(e)=>setLoginForm({...LoginForm,department:e.target.value})} className="my-3" aria-label="Default select example">
+                    <CFormSelect
+                      value={LoginForm.department}
+                      onChange={(e) => setLoginForm({ ...LoginForm, department: e.target.value })}
+                      className="my-3"
+                      aria-label="Default select example"
+                    >
                       <option>Choose Department</option>
                       <option value="1">Security</option>
                       <option value="2">Sourcing</option>

@@ -1,10 +1,10 @@
-import { authConstant } from "./AuthConstant";
-import { AuthReducer } from "./AuthReducer";
+import { authConstant } from './AuthConstant'
 
-
-export const loginRequest=(value)=>{
+const loginRequest = (value) => {
   return {
-    action:authConstant.LOGIN_REQUEST,
-    payload:value
+    type: authConstant.LOGIN_REQUEST,
+    payload: value,
   }
 }
+
+export default loginRequest
