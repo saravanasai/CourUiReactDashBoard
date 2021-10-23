@@ -136,7 +136,7 @@ const ParkingYardGate = () => {
                 </CRow>
                 <CRow className="mt-3 offset-md-8">
                   <CCol xs={12} sm={12} md={6}>
-                    <CButton size="sm" className="mx-3" type="submit">
+                    <CButton size="sm" color="dark" className="mx-3" type="submit">
                       Wait OutSide
                     </CButton>
                     <CButton size="sm" className="mx-3" type="submit">
@@ -197,12 +197,12 @@ const ParkingYardGate = () => {
                 </CCol>
                 <CRow className="mt-4">
                   <CCol xs={12} md={2} className="offset-md-8">
-                    <CButton size="sm" type="submit">
+                    <CButton size="sm" color="dark" type="submit">
                       Wait OutSide
                     </CButton>
                   </CCol>
                   <CCol xs={12} md={2}>
-                    <CButton size="sm" type="submit">
+                    <CButton size="sm" color="primary" type="submit">
                       Gate In
                     </CButton>
                   </CCol>
@@ -227,7 +227,7 @@ const ParkingYardGate = () => {
               <CTableHeaderCell scope="col">Driver Name</CTableHeaderCell>
 
               <CTableHeaderCell scope="col">Phone Number</CTableHeaderCell>
-              <CTableHeaderCell scope="col">Action</CTableHeaderCell>
+              <CTableHeaderCell scope="col">Status</CTableHeaderCell>
             </CTableRow>
           </CTableHead>
 
@@ -245,24 +245,28 @@ const ParkingYardGate = () => {
 
               <CTableDataCell>7708454539</CTableDataCell>
               <CTableDataCell>
-                <CBadge color="success">Gate In</CBadge>
+                <CBadge className="p-2" color="success">
+                  Gate In
+                </CBadge>
               </CTableDataCell>
             </CTableRow>
 
             <CTableRow>
               <CTableHeaderCell scope="row">2</CTableHeaderCell>
 
-              <CTableDataCell>Own</CTableDataCell>
+              <CTableDataCell>Hire</CTableDataCell>
 
-              <CTableDataCell>TN45-AT-1985</CTableDataCell>
+              <CTableDataCell>TN45-AT-1854</CTableDataCell>
 
-              <CTableDataCell>25-TON</CTableDataCell>
+              <CTableDataCell>30-TON</CTableDataCell>
 
-              <CTableDataCell>TEST-1</CTableDataCell>
+              <CTableDataCell>TEST-3</CTableDataCell>
 
               <CTableDataCell>7708454539</CTableDataCell>
               <CTableDataCell>
-                <CBadge color="warning">Wait Outside</CBadge>
+                <CBadge className="p-2" color="warning">
+                  Waiting Outside
+                </CBadge>
               </CTableDataCell>
             </CTableRow>
 
@@ -273,29 +277,33 @@ const ParkingYardGate = () => {
 
               <CTableDataCell>TN45-AT-1985</CTableDataCell>
 
-              <CTableDataCell>25-TON</CTableDataCell>
+              <CTableDataCell>15-TON</CTableDataCell>
 
-              <CTableDataCell>TEST-1</CTableDataCell>
+              <CTableDataCell>TEST-5</CTableDataCell>
 
-              <CTableDataCell>7708454539</CTableDataCell>
+              <CTableDataCell>8754211225</CTableDataCell>
               <CTableDataCell>
-                <CBadge color="danger">Rejected</CBadge>
+                <CBadge className="p-2" color="warning">
+                  Waiting Outside
+                </CBadge>
               </CTableDataCell>
             </CTableRow>
             <CTableRow>
               <CTableHeaderCell scope="row">4</CTableHeaderCell>
 
-              <CTableDataCell>Own</CTableDataCell>
+              <CTableDataCell>Contract</CTableDataCell>
 
               <CTableDataCell>TN45-AT-1985</CTableDataCell>
 
-              <CTableDataCell>25-TON</CTableDataCell>
+              <CTableDataCell>10-TON</CTableDataCell>
 
-              <CTableDataCell>TEST-1</CTableDataCell>
+              <CTableDataCell>TEST-6</CTableDataCell>
 
-              <CTableDataCell>7708454539</CTableDataCell>
+              <CTableDataCell>9582457878</CTableDataCell>
               <CTableDataCell>
-                <CBadge color="success">Gate In</CBadge>
+                <CBadge className="p-2" color="success">
+                  Gate In
+                </CBadge>
               </CTableDataCell>
             </CTableRow>
           </CTableBody>
