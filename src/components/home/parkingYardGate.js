@@ -136,10 +136,10 @@ const ParkingYardGate = () => {
                 </CRow>
                 <CRow className="mt-3 offset-md-8">
                   <CCol xs={12} sm={12} md={6}>
-                    <CButton size="sm" color="dark" className="mx-3" type="submit">
+                    <CButton size="sm" color="primary" className="mx-3 text-white" type="submit">
                       Wait OutSide
                     </CButton>
-                    <CButton size="sm" className="mx-3" type="submit">
+                    <CButton size="sm" className="mx-3 text-white" type="submit">
                       Gate In
                     </CButton>
                   </CCol>
