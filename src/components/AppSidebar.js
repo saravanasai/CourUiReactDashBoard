@@ -19,7 +19,6 @@ const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.changeState.sidebarShow)
-  console.log(unfoldable)
   return (
     <CSidebar
       position="fixed"
