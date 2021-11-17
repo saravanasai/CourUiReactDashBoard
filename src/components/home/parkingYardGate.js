@@ -64,7 +64,7 @@ const ParkingYardGate = () => {
 
                     <option value="1">own</option>
 
-                    <option value="2">contract</option>
+                    <option value="2">Contract</option>
 
                     <option value="3">hire</option>
                   </CFormSelect>
