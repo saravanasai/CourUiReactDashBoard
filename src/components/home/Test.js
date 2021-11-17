@@ -20,7 +20,12 @@ import {
   CTableHeaderCell,
   CTableRow,
   CTabPane,
+  CFormFloating
 } from '@coreui/react'
+
+import TextField from '@mui/material/TextField';
+
+
 import React, { useState } from 'react'
 
 const Test = () => {
@@ -45,31 +50,36 @@ const Test = () => {
             <CForm className="row g-3 mt-4 p-1">
               <CRow>
                 <CCol md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
-                  <CFormSelect size="sm" className="mb-3 " aria-label="Small select example">
-                    <option>Select Vehicle Type</option>
-
-                    <option value="1">own</option>
-
-                    <option value="2">contract</option>
-
-                    <option value="3">hire</option>
-                  </CFormSelect>
+                  <input id="vehicleType" type="text" required />
+                  <label htmlFor="vehicleType" placeholder="Vehicle Type"></label>
                 </CCol>
+
                 <CCol md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle No</CFormLabel>
-                  <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
-                    <option>Select Vehicle No</option>
+
+                  <select id="vehicleNo">
+                    <option>Select Vehicle No.</option>
 
                     <option value="1">TN45-AT-8614</option>
 
                     <option value="2">TN45-AT-8612</option>
 
                     <option value="3">TN45-AT-9687</option>
-                  </CFormSelect>
+                  </select>
+                  {/* <label htmlFor="vehicleNo" placeholder="Vehicle No"></label> */}
+                  {/* <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
+                      <option>Select Vehicle No</option>
+
+                      <option value="1">TN45-AT-8614</option>
+
+                      <option value="2">TN45-AT-8612</option>
+
+                      <option value="3">TN45-AT-9687</option>
+                    </CFormSelect>
+                    <CFormLabel htmlFor="inputAddress">Vehicle No</CFormLabel> */}
                 </CCol>
+
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
+                  {/* <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
 
                   <CFormInput
                     size="sm"
@@ -77,10 +87,12 @@ const Test = () => {
                     id="inputAddress"
                     placeholder="Vehicle Capacity"
                     readOnly
-                  />
+                  /> */}
+                  <input id="vehicleCapacity" type="text" required />
+                  <label htmlFor="vehicleCapacity" placeholder="Vehicle Capacity"></label>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
+                  {/* <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
                   <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
                     <option>Select Driver</option>
 
@@ -89,24 +101,44 @@ const Test = () => {
                     <option value="2">TEST-2</option>
 
                     <option value="3">TEST-3</option>
-                  </CFormSelect>
+                  </CFormSelect> */}
+
+                  <select id="vehicleNo">
+                    <option>Select Driver</option>
+
+                    <option value="1">TEST-1</option>
+
+                    <option value="2">TEST-1</option>
+
+                    <option value="3">TEST-1</option>
+                  </select>
+                  {/* <label htmlFor="vehicleNo" placeholder="Vehicle No"></label> */}
                 </CCol>
               </CRow>
               <CRow>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Cell No</CFormLabel>
+                  {/* <CFormLabel htmlFor="inputAddress">Driver Cell No</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" placeholder="7708454539" readOnly /> */}
 
-                  <CFormInput size="sm" id="inputAddress" placeholder="7708454539" readOnly />
+                  <input id="inputAddress" type="text" value="7708454539" required />
+                  <label htmlFor="inputAddress" placeholder="Driver Cell No"></label>
                 </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer Km</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" placeholder="Km on Odometer" />
+                <CCol xs={12} md={3}>
+                  {/* <CFormLabel htmlFor="inputAddress">Odometer Km</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" placeholder="Km on Odometer" /> */}
+                  <input id="inputAddress" type="text" required />
+                  <label htmlFor="inputAddress" placeholder="Km on Odometer"></label>
                 </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="formFileSm">Odometer Photo</CFormLabel>
 
-                  <CFormInput type="file" size="sm" id="formFileSm" />
+                <CCol xs={12} md={3}>
+                  {/* <CFormLabel htmlFor="formFileSm">Odometer Photo</CFormLabel>
+                  <CFormInput type="file" size="sm" id="formFileSm" /> */}
+
+                  {/* <input id="formFileSm" type="file" required />
+                  <label htmlFor="formFileSm" placeholder="Odometer Photo"></label> */}
+
+
                 </CCol>
               </CRow>
               <CRow>

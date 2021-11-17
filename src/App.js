@@ -34,6 +34,9 @@ class App extends Component {
           </React.Suspense>
         </BrowserRouter>
       </Provider>
+      
+
+      
     )
   }
 }
