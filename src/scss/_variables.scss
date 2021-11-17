@@ -5,7 +5,7 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-// $white:     #fff !default;
+// $white:   #fff !default;
 // $gray-base: #3c4b64 !default;
 // $gray-100:  #ebedef !default;
 // $gray-200:  #d8dbe0 !default;
@@ -76,7 +76,7 @@
 
 // fusv-disable
 // $primary-dark:  #1f1498 !default;
-// $primary-base:  #321fdb !default;
+$primary-base:  #4d3227 !default;
 // $primary-50:    #988fed !default;
 // $primary-25:    #ccc7f6 !default;
 
@@ -106,7 +106,7 @@ $info-base:  #ebc999 !default;
 // $danger-25:    #f9d4d4 !default;
 
 // $light-dark:     $gray-100 !default;
-// $light-base:     $gray-100 !default;
+$light-base:     #ebc999 !default;
 // $light-50:       shift-color($light-base, -70) !default;
 // $light-25:       shift-color($light-base, -80) !default;
 
@@ -334,8 +334,8 @@ $info-base:  #ebc999 !default;
 //
 // Settings for the `<body>` element.
 
-// $body-bg:                   $white !default;
-// $body-color:                $high-emphasis !default;
+$body-bg:                   #ebc999 !default;
+$body-color:                #000 !default;
 // $body-text-align:           null !default;
 
 
@@ -705,7 +705,7 @@ $table-color:                 #000 !default;
 
 // $btn-border-width:            $input-btn-border-width !default;
 
-// $btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             600 !default;
 // $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 // $btn-focus-width:             $input-btn-focus-width !default;
 // $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
@@ -770,8 +770,8 @@ $table-color:                 #000 !default;
 // $form-label-margin-bottom:              .5rem !default;
 // $form-label-font-size:                  null !default;
 // $form-label-font-style:                 null !default;
-// $form-label-font-weight:                null !default;
-// $form-label-color:                      null !default;
+$form-label-font-weight:                600 !default;
+$form-label-color:                      #4d3227 !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
@@ -791,7 +791,7 @@ $table-color:                 #000 !default;
 // $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
 // $input-bg:                              $white !default;
-// $input-disabled-bg:                     $gray-200 !default;
+$input-disabled-bg:                     #EBC999 !default;
 // $input-disabled-border-color:           $gray-400 !default;
 
 $input-color:                           #000 !default;
@@ -1583,7 +1583,8 @@ $header-brand-color:            #FFF !default;
 
 // Breadcrumbs
 // scss-docs-start breadcrumb-variables
-// $breadcrumb-font-size:              null !default;
+$breadcrumb-font-size:              1rem !default;
+$breadcrumb-font-weight:              bold !default;
 // $breadcrumb-padding-y:              0 !default;
 // $breadcrumb-padding-x:              0 !default;
 // $breadcrumb-item-padding-x:         .5rem !default;
@@ -1632,7 +1633,7 @@ $breadcrumb-active-color:           #FFF !default;
 // scss-docs-end carousel-variables
 
 // scss-docs-start sidebar-variables
-// $sidebar-width:                            16rem !default;
+$sidebar-width:                            13rem !default;
 // $sidebar-widths: (
 //   sm: 12rem,
 //   lg: 20rem,
@@ -1646,9 +1647,10 @@ $sidebar-bg:                               #FFF !default;
 // $sidebar-border-color:                     transparent !default;
 // $sidebar-transition:                       margin-left .15s, margin-right .15s, box-shadow .075s, transform .15s, width .15s, z-index 0s ease .15s !default;
 
-// $sidebar-brand-height:                     4rem !default;
+$sidebar-brand-height:                     3rem !default;
 $sidebar-brand-color:                      #000 !default;
 $sidebar-brand-bg:                         #FFF  !default;
+$sidebar-brand-font-weight:                600 !default;
 
 // $sidebar-header-height:                    4rem !default;
 // $sidebar-header-padding-y:                 .75rem !default;
@@ -1708,7 +1710,7 @@ $sidebar-nav-link-active-bg:               #4d3227!default;
 // $sidebar-footer-height-transition:         height .15s, padding .15s !default;
 
 // $sidebar-toggler-height:                   3rem !default;
-// $sidebar-toggler-bg:                       rgba($black, .2) !default;
+$sidebar-toggler-bg:                       #FFF !default;
 // $sidebar-toggler-transition:               transform .15s !default;
 
 // $sidebar-toggler-indicator-width:          4rem !default;

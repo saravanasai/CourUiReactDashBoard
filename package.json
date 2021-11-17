@@ -58,7 +58,7 @@
     "sass": "^1.42.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --max_old_space_size=8128 start",
     "build": "react-scripts build",
     "lint": "eslint \"src/**/*.js\"",
     "test": "react-scripts test",
