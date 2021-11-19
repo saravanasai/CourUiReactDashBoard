@@ -28,10 +28,53 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Security',
-    to: '/security',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    name: 'Vehicle Inspection',
+    to: '/dashboard',
+    icon: <CIcon icon={cilCheck} customClassName="nav-icon" />,
   },
+  {
+    component: CNavItem,
+    name: 'Vehicle Maintain',
+    to: '/base/breadcrumbs',
+    icon: <CIcon icon={cilGauge} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Docs. Verification',
+    to: '/base/accordion',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Vendor Create Req.',
+    to: '/base',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+  },
+  // {
+  //   component: CNavItem,
+  //   name: 'Vendor Create App.',
+  //   to: '/base/breadcrumbs',
+  //   icon: <CIcon icon={cilApplications} customClassName="nav-icon" />,
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Sub Menu',
+  //   to: '/base',
+  //   icon: <CIcon icon={cilBrowser} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Accordion',
+  //       to: '/base/accordion',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Breadcrumb',
+  //       to: '/base/breadcrumbs',
+  //     },
+  //   ],
+  // },
+
 ]
 
 export default _nav

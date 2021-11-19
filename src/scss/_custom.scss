@@ -1,7 +1,7 @@
 
 
-// // Css For Field Set in Input
-// input[type],select {
+// Css For Field Set in Input
+// input[type]{
 //     box-sizing: border-box;
 //     width: 100%;
 //     height: calc(2.5em + 2px);
@@ -9,10 +9,11 @@
 //     padding: 6px;
 //     border: 1px solid #bababa;
 //     border-radius: 3px;
-//     background: #fff;
+//     background: rgb(255, 255, 255);
 //       font-size: 16px;
 //     resize: none;
 //     outline: none;
+
 //   }
 
 //   select:nth-child(0){
@@ -22,7 +23,7 @@
 //   }
 
 //   input[type]:focus,select:focus {
-//     border-color: #4d3227;
+//     border-color: #ff4800;
 //   }
 
 //   input[type]:focus + label[placeholder]:before,
@@ -43,7 +44,7 @@
 //   }
 
 //   input[type]:valid + label[placeholder]:before {
-//       color: #4d3227;
+//       color: #00ffdd;
 //   }
 
 //   input[type]:invalid + label[placeholder][alt]:before {
@@ -56,6 +57,20 @@
 //     line-height: 1.25em;
 //     margin-top: calc(-3em - 2px);
 //     margin-bottom: calc((3em - 1em) + 2px);
+//   }
+
+//   input[type] + label[placeholder]:before {
+//     content: attr(placeholder);
+//     display: inline-block;
+//     margin: 0 calc(0.5em + 2px);
+//     padding: 0 2px;
+//     color: #7d7d7d;
+//     white-space: nowrap;
+//     transition: 0.3s ease-in-out;
+//     background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+//     background-size: 100% 5px;
+//     background-repeat: no-repeat;
+//     background-position: center;
 //   }
 
 //   input[type] + label[placeholder]:before {
@@ -137,3 +152,5 @@
 //   font-size:103%;
 // }
 
+
+// @import '~@tkrotoff/bootstrap-floating-label/src/bootstrap-floating-label';
