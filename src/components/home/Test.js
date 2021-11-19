@@ -33,7 +33,7 @@ const Test = () => {
   return (
     <>
       <CCard>
-        <CNav className="p-3 " variant="pills" size="sm" role="tablist">
+        {/* <CNav className="p-3 " variant="pills" size="sm" role="tablist">
           <CNavItem>
             <CNavLink
               className="btn btn-sm"
@@ -44,42 +44,33 @@ const Test = () => {
               Security Yard Gate
             </CNavLink>
           </CNavItem>
-        </CNav>
+        </CNav> */}
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={activeKey === 1}>
-            <CForm className="row g-3 mt-4 p-1">
+            <CForm className="row g-3 m-2 p-1">
               <CRow>
                 <CCol md={3}>
-                  <input id="vehicleType" type="text" required />
-                  <label htmlFor="vehicleType" placeholder="Vehicle Type"></label>
+                  <CFormLabel htmlFor="vehicleType">Vehicle Type</CFormLabel>
+                  <CFormInput size="sm" id="vehicleType" placeholder=""/>
+
                 </CCol>
 
                 <CCol md={3}>
-
-                  <select id="vehicleNo">
-                    <option>Select Vehicle No.</option>
+                  <CFormLabel htmlFor="inputAddress">Vehicle No</CFormLabel>
+                  <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
+                    <option>Select Vehicle No</option>
 
                     <option value="1">TN45-AT-8614</option>
 
                     <option value="2">TN45-AT-8612</option>
 
                     <option value="3">TN45-AT-9687</option>
-                  </select>
-                  {/* <label htmlFor="vehicleNo" placeholder="Vehicle No"></label> */}
-                  {/* <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
-                      <option>Select Vehicle No</option>
+                  </CFormSelect>
 
-                      <option value="1">TN45-AT-8614</option>
-
-                      <option value="2">TN45-AT-8612</option>
-
-                      <option value="3">TN45-AT-9687</option>
-                    </CFormSelect>
-                    <CFormLabel htmlFor="inputAddress">Vehicle No</CFormLabel> */}
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  {/* <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
 
                   <CFormInput
                     size="sm"
@@ -87,12 +78,10 @@ const Test = () => {
                     id="inputAddress"
                     placeholder="Vehicle Capacity"
                     readOnly
-                  /> */}
-                  <input id="vehicleCapacity" type="text" required />
-                  <label htmlFor="vehicleCapacity" placeholder="Vehicle Capacity"></label>
+                  />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  {/* <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
                   <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
                     <option>Select Driver</option>
 
@@ -101,56 +90,45 @@ const Test = () => {
                     <option value="2">TEST-2</option>
 
                     <option value="3">TEST-3</option>
-                  </CFormSelect> */}
-
-                  <select id="vehicleNo">
-                    <option>Select Driver</option>
-
-                    <option value="1">TEST-1</option>
-
-                    <option value="2">TEST-1</option>
-
-                    <option value="3">TEST-1</option>
-                  </select>
-                  {/* <label htmlFor="vehicleNo" placeholder="Vehicle No"></label> */}
+                  </CFormSelect>
                 </CCol>
               </CRow>
               <CRow>
                 <CCol xs={12} md={3}>
-                  {/* <CFormLabel htmlFor="inputAddress">Driver Cell No</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" placeholder="7708454539" readOnly /> */}
-
-                  <input id="inputAddress" type="text" value="7708454539" required />
-                  <label htmlFor="inputAddress" placeholder="Driver Cell No"></label>
+                  <CFormLabel htmlFor="inputAddress">Driver Cell No</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" placeholder="7708454539" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  {/* <CFormLabel htmlFor="inputAddress">Odometer Km</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" placeholder="Km on Odometer" /> */}
-                  <input id="inputAddress" type="text" required />
-                  <label htmlFor="inputAddress" placeholder="Km on Odometer"></label>
+                  <CFormLabel htmlFor="inputAddress">Odometer Km</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" placeholder="Km on Odometer" />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  {/* <CFormLabel htmlFor="formFileSm">Odometer Photo</CFormLabel>
-                  <CFormInput type="file" size="sm" id="formFileSm" /> */}
-
-                  {/* <input id="formFileSm" type="file" required />
-                  <label htmlFor="formFileSm" placeholder="Odometer Photo"></label> */}
-
-
+                  <CFormLabel htmlFor="formFileSm">Odometer Photo</CFormLabel>
+                  <CFormInput type="file" size="sm" id="formFileSm" />
                 </CCol>
-              </CRow>
-              <CRow>
-                <CCol className="mt-3 offset-md-9 py-2" xs={12} sm={12} md={3}>
-                  <CButton size="sm" color="primary" className="mx-3 text-white" type="submit">
+                <CCol xs={12} md={3} className="mt-3 pt-1" style={{display:'flex',justifyContent:'space-between'}}>
+                {/* <CCol className="mt-3 offset-md-9 py-2" xs={12} sm={12} md={3}> */}
+                 <CButton size="sm" color="warning" className="text-white" type="submit">
                     Wait OutSide
                   </CButton>
-                  <CButton size="sm" className="mx-3 text-white" type="submit">
+                  <CButton size="sm" color="warning" className="text-white" type="submit">
+                    Gate In
+                  </CButton>
+                {/* </CCol> */}
+                </CCol>
+              </CRow>
+              {/* <CRow>
+                <CCol className="mt-3 offset-md-9 py-2" xs={12} sm={12} md={3}>
+                  <CButton size="sm" color="warning" className="mx-3 text-white" type="submit">
+                    Wait OutSide
+                  </CButton>
+                  <CButton size="sm" color="warning" className="mx-3 text-white" type="submit">
                     Gate In
                   </CButton>
                 </CCol>
-              </CRow>
+              </CRow> */}
             </CForm>
           </CTabPane>
         </CTabContent>
@@ -160,14 +138,6 @@ const Test = () => {
           <CTable responsive className="table table-sm">
             <CTableHead>
               <CTableRow>
-                {/* <CTableHeaderCell scope="col">#</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Vehicle Type</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Vehicle No</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Vehicle Capacity</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Driver Name</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Phone Number</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Status</CTableHeaderCell> */}
-
                 <CTableHeaderCell scope="col">S.No</CTableHeaderCell>
                 <CTableHeaderCell scope="col">VA No</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Tripsheet No</CTableHeaderCell>
@@ -213,7 +183,7 @@ const Test = () => {
                 <CTableDataCell>0 Hrs 07 Mins</CTableDataCell>
                 <CTableDataCell>0 Hrs 55 Mins</CTableDataCell>
                 <CTableDataCell>
-                  <CButton className="btn btn-sm" color="primary">
+                  <CButton className="badge text-white" color="warning">
                     Gate In
                   </CButton>
                 </CTableDataCell>
@@ -233,7 +203,7 @@ const Test = () => {
                 <CTableDataCell>0 Hrs 07 Mins</CTableDataCell>
                 <CTableDataCell>0 Hrs 55 Mins</CTableDataCell>
                 <CTableDataCell>
-                  <CButton className="btn btn-sm" color="primary">
+                  <CButton className="badge text-white" color="warning">
                     Gate In
                   </CButton>
                 </CTableDataCell>
@@ -252,7 +222,8 @@ const Test = () => {
                 <CTableDataCell>0 Hrs 07 Mins</CTableDataCell>
                 <CTableDataCell>0 Hrs 55 Mins</CTableDataCell>
                 <CTableDataCell>
-                  <CButton className="btn btn-sm" color="primary">
+                  {/* <CButton className="btn btn-sm rounded-pill text-white" color="warning"> */}
+                  <CButton className="badge text-white" color="warning">
                     Gate In
                   </CButton>
                 </CTableDataCell>
@@ -272,7 +243,7 @@ const Test = () => {
                 <CTableDataCell>0 Hrs 07 Mins</CTableDataCell>
                 <CTableDataCell>0 Hrs 55 Mins</CTableDataCell>
                 <CTableDataCell>
-                  <CButton className="btn btn-sm" color="primary">
+                  <CButton className="badge text-white" color="warning">
                     Gate In
                   </CButton>
                 </CTableDataCell>
