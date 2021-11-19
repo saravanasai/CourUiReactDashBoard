@@ -35,7 +35,7 @@ const AppHeader = () => {
           {/* <CIcon icon={logo} height={48} alt="Logo" /> */}
           Logistics Pro
         </CHeaderBrand>
-        <CHeaderNav className="d-none d-md-flex me-auto">
+        {/* <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
             <CNavLink to="/dashboard" component={NavLink} activeClassName="active">
               Dashboard
@@ -47,14 +47,17 @@ const AppHeader = () => {
           <CNavItem>
             <CNavLink href="#">Settings</CNavLink>
           </CNavItem>
-        </CHeaderNav>
-        <CHeaderNav>
+        </CHeaderNav> */}
+        <div className="text-center">
+          <h2 className="text-white">Parking Yard Gate-In</h2>
+        </div>
+        {/* <CHeaderNav>
           <CNavItem>
             <CNavLink href="#">
               <CIcon icon={cilEnvelopeOpen} size="lg" />
             </CNavLink>
           </CNavItem>
-        </CHeaderNav>
+        </CHeaderNav> */}
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
         </CHeaderNav>

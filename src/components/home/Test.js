@@ -35,7 +35,7 @@ const Test = () => {
   return (
     <>
       <CCard>
-        <CNav className="p-3 " variant="pills" size="sm" role="tablist">
+        {/* <CNav className="p-3 " variant="pills" size="sm" role="tablist">
           <CNavItem>
             <CNavLink
               className="btn btn-sm"
@@ -46,10 +46,10 @@ const Test = () => {
               Security Yard Gate
             </CNavLink>
           </CNavItem>
-        </CNav>
+        </CNav> */}
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={activeKey === 1}>
-            <CForm className="row g-3 mt-4 p-1">
+            <CForm className="row g-3 m-2 p-1">
               <CRow>
                 <CCol xs={12} md={3}>
                   <TextInput lableName={'Name'} inputType={'date'} />
@@ -70,11 +70,22 @@ const Test = () => {
                   <CButton size="sm" color="primary" className="mx-3 text-white" type="submit">
                     Wait OutSide
                   </CButton>
-                  <CButton size="sm" className="mx-3 text-white" type="submit">
+                  <CButton size="sm" color="warning" className="text-white" type="submit">
+                    Gate In
+                  </CButton>
+                {/* </CCol> */}
+                </CCol>
+              </CRow>
+              {/* <CRow>
+                <CCol className="mt-3 offset-md-9 py-2" xs={12} sm={12} md={3}>
+                  <CButton size="sm" color="warning" className="mx-3 text-white" type="submit">
+                    Wait OutSide
+                  </CButton>
+                  <CButton size="sm" color="warning" className="mx-3 text-white" type="submit">
                     Gate In
                   </CButton>
                 </CCol>
-              </CRow>
+              </CRow> */}
             </CForm>
           </CTabPane>
         </CTabContent>
@@ -84,14 +95,6 @@ const Test = () => {
           <CTable responsive className="table table-sm">
             <CTableHead>
               <CTableRow>
-                {/* <CTableHeaderCell scope="col">#</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Vehicle Type</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Vehicle No</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Vehicle Capacity</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Driver Name</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Phone Number</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Status</CTableHeaderCell> */}
-
                 <CTableHeaderCell scope="col">S.No</CTableHeaderCell>
                 <CTableHeaderCell scope="col">VA No</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Tripsheet No</CTableHeaderCell>
@@ -137,7 +140,7 @@ const Test = () => {
                 <CTableDataCell>0 Hrs 07 Mins</CTableDataCell>
                 <CTableDataCell>0 Hrs 55 Mins</CTableDataCell>
                 <CTableDataCell>
-                  <CButton className="btn btn-sm" color="primary">
+                  <CButton className="badge text-white" color="warning">
                     Gate In
                   </CButton>
                 </CTableDataCell>
@@ -157,7 +160,7 @@ const Test = () => {
                 <CTableDataCell>0 Hrs 07 Mins</CTableDataCell>
                 <CTableDataCell>0 Hrs 55 Mins</CTableDataCell>
                 <CTableDataCell>
-                  <CButton className="btn btn-sm" color="primary">
+                  <CButton className="badge text-white" color="warning">
                     Gate In
                   </CButton>
                 </CTableDataCell>
@@ -176,7 +179,8 @@ const Test = () => {
                 <CTableDataCell>0 Hrs 07 Mins</CTableDataCell>
                 <CTableDataCell>0 Hrs 55 Mins</CTableDataCell>
                 <CTableDataCell>
-                  <CButton className="btn btn-sm" color="primary">
+                  {/* <CButton className="btn btn-sm rounded-pill text-white" color="warning"> */}
+                  <CButton className="badge text-white" color="warning">
                     Gate In
                   </CButton>
                 </CTableDataCell>
@@ -196,7 +200,7 @@ const Test = () => {
                 <CTableDataCell>0 Hrs 07 Mins</CTableDataCell>
                 <CTableDataCell>0 Hrs 55 Mins</CTableDataCell>
                 <CTableDataCell>
-                  <CButton className="btn btn-sm" color="primary">
+                  <CButton className="badge text-white" color="warning">
                     Gate In
                   </CButton>
                 </CTableDataCell>

@@ -6,8 +6,11 @@ import {
   cilBrowser,
   cilCalculator,
   cilChartPie,
+  cilCheck,
   cilCursor,
   cilDrop,
+  cilGauge,
+  cilInput,
   cilNotes,
   cilPencil,
   cilPuzzle,
@@ -19,39 +22,9 @@ import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 const _nav = [
   {
     component: CNavItem,
-    name: 'Dashboard',
-    to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Menu',
-    to: '/dashboard',
-    icon: <CIcon icon={cilApplications} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavGroup,
-    name: 'Sub Menu',
-    to: '/base',
-    icon: <CIcon icon={cilBrowser} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Accordion',
-        to: '/base/accordion',
-      },
-      {
-        component: CNavItem,
-        name: 'Breadcrumb',
-        to: '/base/breadcrumbs',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'TEST',
+    name: 'Yard Gate-In',
     to: '/test',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
