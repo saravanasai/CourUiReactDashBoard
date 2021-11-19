@@ -33,10 +33,10 @@ const AppHeader = () => {
         </CHeaderToggler>
         <CHeaderBrand className="mx-auto d-md-none" to="/">
           {/* <CIcon icon={logo} height={48} alt="Logo" /> */}
-          Logistics Pro
+          <h3>Logistics Pro</h3>
         </CHeaderBrand>
-        {/* <CHeaderNav className="d-none d-md-flex me-auto">
-          <CNavItem>
+        {/* <CHeaderNav className="d-none d-md-flex me-auto text-center "> */}
+          {/* <CNavItem>
             <CNavLink to="/dashboard" component={NavLink} activeClassName="active">
               Dashboard
             </CNavLink>
@@ -46,11 +46,9 @@ const AppHeader = () => {
           </CNavItem>
           <CNavItem>
             <CNavLink href="#">Settings</CNavLink>
-          </CNavItem>
-        </CHeaderNav> */}
-        <div className="text-center">
+          </CNavItem> */}
           <h2 className="text-white">Parking Yard Gate-In</h2>
-        </div>
+        {/* </CHeaderNav> */}
         {/* <CHeaderNav>
           <CNavItem>
             <CNavLink href="#">
