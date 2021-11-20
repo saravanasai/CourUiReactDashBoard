@@ -4,7 +4,7 @@ import { CButton } from '@coreui/react'
 const CustomTable = () => {
   const columns = [
     {
-      name: 'SNo',
+      name: 'S.No',
       selector: (row) => row.sno,
       sortable: true,
       center: true,
@@ -75,7 +75,7 @@ const CustomTable = () => {
       Screen_Duration: '0 Hrs 07 Mins',
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
-        <CButton className="btn btn-sm text-white" color="warning">
+        <CButton className="badge text-white" color="warning">
           Vehicle Insp
         </CButton>
       ),
@@ -92,7 +92,7 @@ const CustomTable = () => {
       Screen_Duration: '0 Hrs 07 Mins',
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
-        <CButton className="btn btn-sm text-white" color="warning">
+        <CButton className="badge text-white" color="warning">
           Gate In
         </CButton>
       ),
@@ -109,31 +109,41 @@ const CustomTable = () => {
       Screen_Duration: '1 Hrs 07 Mins',
       Overall_Duration: '2 Hrs 55 Mins',
       Action: (
-        <CButton className="btn btn-sm text-white" color="warning">
+        <CButton className="badge text-white" color="warning">
           Gate Out
         </CButton>
       ),
     },
   ]
   const customStyles = {
+    // rdt_TableHeadRow:{
+    //   style:{
+    //     color:'red'
+    //   }
+    // },
     rows: {
       style: {
-        minHeight: '50px', // override the row height
+        minHeight: '2.0rem', // override the row height
       },
     },
     headCells: {
       style: {
-        paddingLeft: '8px', // override the cell padding for head cells
-        paddingRight: '8px',
+        padding:'0',
+        margin:'0',
+        paddingLeft: '5px', // override the cell padding for head cells
+        paddingRight: '5px',
         backgroundColor: '#4d3227',
         color: '#fff',
         fontSize: '0.8rem',
+        fontWeight:'bold',
+        height:'2.2rem',
       },
     },
     cells: {
       style: {
         paddingLeft: '8px', // override the cell padding for data cells
         paddingRight: '8px',
+        fontSize: '0.75rem',
         textAlign: 'center',
       },
     },

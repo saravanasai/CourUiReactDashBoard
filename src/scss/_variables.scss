@@ -962,7 +962,7 @@ $input-color:                           #000 !default;
 
 // scss-docs-start form-file-variables
 // $form-file-button-color:          $input-color !default;
-// $form-file-button-bg:             $input-group-addon-bg !default;
+// $form-file-button-bg:             #FFF !default;
 // $form-file-button-hover-bg:       shade-color($form-file-button-bg, 5%) !default;
 // scss-docs-end form-file-variables
 
@@ -1537,7 +1537,7 @@ $header-brand-color:            #FFF !default;
 // $header-nav-link-padding-x:     .5rem !default;
 
 // $header-divider-border-width:   1px !default;
-// $header-divider-border-color:   $header-border-color !default;
+$header-divider-border-color:   transparent !default;
 // scss-docs-end header-variables
 
 // Subheader
@@ -1727,7 +1727,7 @@ $sidebar-toggler-bg:                       #FFF !default;
 // $footer-min-height:    3rem !default;
 // $footer-padding-y:     $spacer / 2 !default;
 // $footer-padding-x:     $spacer !default;
-// $footer-bg:            $gray-100 !default;
+$footer-bg:            transparent !default;
 // $footer-color:         $body-color !default;
 // $footer-border-width:  1px !default;
 // $footer-border-color:  $border-color !default;
